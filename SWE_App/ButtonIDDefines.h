@@ -1,0 +1,6 @@
+#pragma once
+#define SIN_BUTTON_ID 10
+#define COSINE_BUTTON_ID 11
+#define TANGENT_BUTTON_ID 12
+#define CLEAR_BUTTON_ID 13
+#define DELETE_BUTTON_ID 14
