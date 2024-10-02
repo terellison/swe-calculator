@@ -9,11 +9,13 @@ wxEND_EVENT_TABLE()
 
 void Calculator::SetupRow1()
 {
+	Buttons.push_back(ButtonFactory::CreateExponentButton(this));
 	Buttons.push_back(ButtonFactory::CreateOpenParenthesesButton(this));
 	Buttons.push_back(ButtonFactory::CreateClosingParenthesesButton(this));
 	Buttons.push_back(ButtonFactory::CreateClearButton(this, CLEAR_BUTTON_ID));
 	
-	row1->AddSpacer(WINDOW_WIDTH - (ButtonFactory::ButtonSize->GetWidth() * 3));
+	row1->AddSpacer(WINDOW_WIDTH - (ButtonFactory::ButtonSize->GetWidth() * 4));
+	row1->Add(GetButtonInstanceByID('^'), 2, wxEXPAND, 10);
 	row1->Add(GetButtonInstanceByID('('), 2, wxEXPAND, 10);
 	row1->Add(GetButtonInstanceByID(')'), 2, wxEXPAND, 10);
 	row1->Add(GetButtonInstanceByID(CLEAR_BUTTON_ID), 2, wxEXPAND, 10);

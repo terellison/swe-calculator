@@ -41,5 +41,6 @@ public:
 	static wxButton* CreateOpenParenthesesButton(wxWindow* parent);
 	static wxButton* CreateClosingParenthesesButton(wxWindow* parent);
 
+	static wxButton* CreateExponentButton(wxWindow* parent);
 };
 
