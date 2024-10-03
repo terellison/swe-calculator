@@ -9,12 +9,16 @@ wxEND_EVENT_TABLE()
 
 void Calculator::SetupRow1()
 {
+	// Create and store each button instance in the Button list
 	Buttons.push_back(ButtonFactory::CreateExponentButton(this));
 	Buttons.push_back(ButtonFactory::CreateOpenParenthesesButton(this));
 	Buttons.push_back(ButtonFactory::CreateClosingParenthesesButton(this));
 	Buttons.push_back(ButtonFactory::CreateClearButton(this, CLEAR_BUTTON_ID));
 	
+	// Width is multiplied by the number of buttons in the row
 	row1->AddSpacer(WINDOW_WIDTH - (ButtonFactory::ButtonSize->GetWidth() * 4));
+
+	// Add each button to the row
 	row1->Add(GetButtonInstanceByID('^'), 2, wxEXPAND, 10);
 	row1->Add(GetButtonInstanceByID('('), 2, wxEXPAND, 10);
 	row1->Add(GetButtonInstanceByID(')'), 2, wxEXPAND, 10);
