@@ -1,5 +1,6 @@
 #include "CalculatorProcessor.h"
 #include <list>
+#include <cmath>
 
 CalculatorProcessor* CalculatorProcessor::_instance = nullptr;
 
@@ -114,7 +115,7 @@ float CalculatorProcessor::ParseExpression(std::string expression) const
 		postFix += std::to_string(num) + '|';
 	}
 
-	while (!opStack.empty())
+ 	while (!opStack.empty())
 	{
 		postFix += opStack.front();
 		opStack.pop_front();
@@ -166,6 +167,8 @@ float CalculatorProcessor::Process(const std::string left, const char mathOp, co
 		return std::stof(left) * std::stof(right);
 	case '/':
 		return std::stof(left) / std::stof(right);
+	case '^':
+		return std::powf(std::stof(left), std::stof(right));
 	default:
 		return std::stoi(left) % std::stoi(right);
 	}
