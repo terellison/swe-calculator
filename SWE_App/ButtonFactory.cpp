@@ -131,3 +131,8 @@ wxButton* ButtonFactory::CreateClosingParenthesesButton(wxWindow* parent)
 {
     return CreateButton(parent, ')');
 }
+
+wxButton* ButtonFactory::CreateExponentButton(wxWindow* parent)
+{
+    return CreateButton(parent, '^');
+}

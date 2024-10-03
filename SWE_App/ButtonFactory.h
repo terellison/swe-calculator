@@ -6,11 +6,19 @@ private:
 	
 	static wxButton* CreateButton(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& label = wxEmptyString, const wxPoint position = wxDefaultPosition);
 	/// <summary>
-	/// Uses the label as the id
+	/// Creates a new button. Uses the ASCII value of the label as the id of the button
 	/// </summary>
 	/// <param name="parent">Pointer to the parent window</param>
-	/// <returns></returns>
+	/// <param name="label">Symbol to be displayed on the button</param>
+	/// <returns>Pointer to the buton that was created</returns>
 	static wxButton* CreateButton(wxWindow* parent, const char& label);
+
+	/// <summary>
+	/// Creates a new button. Used for numerical buttons
+	/// </summary>
+	/// <param name="parent">Pointer to the parent window of the button</param>
+	/// <param name="label">Number to be displayed on the button</param>
+	/// <returns></returns>
 	static wxButton* CreateButton(wxWindow* parent, unsigned int label);
 public:
 	static wxSize* ButtonSize;
@@ -41,5 +49,6 @@ public:
 	static wxButton* CreateOpenParenthesesButton(wxWindow* parent);
 	static wxButton* CreateClosingParenthesesButton(wxWindow* parent);
 
+	static wxButton* CreateExponentButton(wxWindow* parent);
 };
 

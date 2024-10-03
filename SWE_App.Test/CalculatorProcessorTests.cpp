@@ -104,5 +104,23 @@ namespace CalculatorProcessorTests
 
 			Assert::AreEqual(3.142857f, result);
 		}
+
+		TEST_METHOD(Calculate_Four_Squared)
+		{
+			auto expression = "4^2";
+
+			auto result = CalculatorProcessor::GetInstance()->ParseExpression(expression);
+
+			Assert::AreEqual(16.0f, result);
+		}
+
+		TEST_METHOD(Calculate_Twelve_Squared)
+		{
+			auto expression = "(6*2)^2";
+
+			auto result = CalculatorProcessor::GetInstance()->ParseExpression(expression);
+
+			Assert::AreEqual(144.0f, result);
+		}
 	};
 }
