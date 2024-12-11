@@ -1,0 +1,23 @@
+/* TODO: 
+    - Fill out the values below
+    - Remove the '.template' from the file name
+    - Delete the comments
+*/
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "vcpkg_user",
+            // The compiler for your system. Run `cmake --help` for a list of generators
+            "generator": "<Specify platform-specific generator here>",
+            "inherits" : "vcpkg",
+            "environment": {
+                "VCPKG_ROOT": "<Add absolute path to vcpkg here>"
+            }
+        },
+        {
+            "name": "default",
+            "inherits": "vcpkg_user"
+        }
+    ]
+}
