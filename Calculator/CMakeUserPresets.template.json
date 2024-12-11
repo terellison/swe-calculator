@@ -1,10 +1,14 @@
-
+/* TODO: 
+    - Fill out the values below
+    - Remove the '.template' from the file name
+    - Delete the comments
+*/
 {
-    "_comment": "Fill out the values below, remove the .template from the file name, then delete this comment to build",
     "version": 2,
     "configurePresets": [
         {
             "name": "vcpkg_user",
+            // The compiler for your system. Run `cmake --help` for a list of generators
             "generator": "<Specify platform-specific generator here>",
             "inherits" : "vcpkg",
             "environment": {
