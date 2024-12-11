@@ -3,24 +3,23 @@ Calculator I created as part of Software Engineering at Full Sail University. Us
 
 ![Demonstration of the Calculator evaluating 2 times 2](.github/readme-assets/Demo.gif)
 
-## How to build
+## Build & run
 
 ### Pre-requisites
 
-- Visual Studio 2022
-- vcpkg Package Manager (Should be installed by default with Visual Studio 2022)
-- Windows 10 / 11
+- [cmake](https://cmake.org/download/) (Version 3.31 or later)
+- [vcpkg Package Manager](https://github.com/microsoft/vcpkg)
+- After these are installed, follow the instructions in [CMakeUserPresets.template.json](/Calculator/CMakeUserPresets.template.json)
 
-## Build & Run
+### Build
 
-- Switch the Active Solution Configuration to Win32:
+From the terminal of your choice, run:
 
-![alt text](.github/readme-assets/image-1.png)
+```zsh
+# This example uses Unix Makefiles as the generator. Use the build command for the generator you specified in CMakeUserPresets.json
 
-- Right-click SWE-App -> Set as Startup Project
-
-![alt text](.github/readme-assets/image-2.png)
-
-- Press F5
-
-> Note: MSBuild should automatically download and install wx-widgets during the build
+cd ./Calculator
+cmake --preset=default -S . -B ./build/
+cd ./build
+make 
+``` 

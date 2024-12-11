@@ -1,5 +1,5 @@
 #pragma once
-#include "wx\wx.h"
+#include "wx/wx.h"
 #include "ButtonIDDefines.h"
 
 #define WINDOW_WIDTH 500
