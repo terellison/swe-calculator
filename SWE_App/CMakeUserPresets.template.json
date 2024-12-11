@@ -1,0 +1,19 @@
+
+{
+    "_comment": "Fill out the values below, remove the .template from the file name, then delete this comment to build",
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "vcpkg_user",
+            "generator": "<Specify platform-specific generator here>",
+            "inherits" : "vcpkg",
+            "environment": {
+                "VCPKG_ROOT": "<Add absolute path to vcpkg here>"
+            }
+        },
+        {
+            "name": "default",
+            "inherits": "vcpkg_user"
+        }
+    ]
+}
