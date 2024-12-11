@@ -366,3 +366,4 @@ vcpkg_installed/
 .vscode/
 build/
 CMakeUserPresets.json
+.DS_Store
